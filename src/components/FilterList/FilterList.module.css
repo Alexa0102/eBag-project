@@ -1,0 +1,9 @@
+.filterList {
+    display: flex;
+    gap: 1rem;
+    background-color: rgb(191, 225, 174);
+    padding: 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+
+
+}

@@ -1,0 +1,19 @@
+.tableContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+table,
+th,
+td {
+    border: 1.5px solid black;
+    border-collapse: collapse;
+    padding: 0.5em 2em 0.5em;
+}
+
+.table {
+    background-color: pink;
+}

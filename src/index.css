@@ -1,13 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+*/:root {
+
+  --primary-dark: hsl(32, 39%, 59%);
+  --primary-light: #a9a284;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+* {
+  /* background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)); */
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: rgba(0,0,0,0.1); */
+}
+
+body {
+  font-family: "Trebuchet MS", sans-serif;
+  background-color: rgb(220, 247, 215);
 }

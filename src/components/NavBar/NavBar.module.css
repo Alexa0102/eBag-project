@@ -1,0 +1,12 @@
+.navDiv {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2rem ;
+    gap: 1rem;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(104, 145, 128, 0.5);
+}
+
