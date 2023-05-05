@@ -120,25 +120,5 @@ const DUMMY_DATA = [
     orderDate: "04/25/2023",
     deliveryDate: "04/25/2023",
   },
-  {
-    id: "prada",
-    orderNumber: "52364",
-    name: "Ralitsa Videva",
-    orderAmount: "200 лв.",
-    orderDate: "04/25/2023",
-    deliveryDate: "04/25/2023",
-  },
-  {
-    id: "prada",
-    orderNumber: "52364",
-    name: "Ralitsa Videva",
-    orderAmount: "200 лв.",
-  },
-  {
-    id: "prada",
-    orderNumber: "52364",
-    name: "Ralitsa Videva",
-    orderAmount: "200 лв.",
-  },
 ];
 export default DUMMY_DATA;
