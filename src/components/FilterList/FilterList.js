@@ -83,6 +83,7 @@ const FilterList = (props) => {
   return (
     <div className={classes.filterList}>
       <MapButtons />
+      <button className={classes.searchButton}>Search</button>
     </div>
   );
 };
