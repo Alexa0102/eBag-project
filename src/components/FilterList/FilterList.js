@@ -1,38 +1,16 @@
 import React, { useState } from "react";
-import FilterButton from "../FilterButton/FilterButton";
+
 import classes from "./FilterList.module.css";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function MyDropdown(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  function handleSelectChange(event) {
-    setSelectedOption(event.target.value);
-  }
-
-  // return (
-  // <div>
-
-  //     <select value={selectedOption} onChange={handleSelectChange}>
-  //       <option value="yes">Карта</option>
-  //       <option value="no">Наложен платеж</option>
-  //       <option value="no">Фактура</option>
-
-  //     </select>
-
-  // </div>
-  // );
-}
-
 export const filterData = [
-  { id: "dateCreated", name: "Дата на създаване на поръчката" },
-  { id: "dateDelivered", name: "Дата на доставяне на поръчката" },
+  { id: "dateCreated", name: "ДАТА НА СЪЗДАВАНЕ НА ПОРЪЧКАТА" },
+  { id: "dateDelivered", name: "ДАТА НА ДОСАТВЯНЕ НА ПОРЪЧКАТА" },
   {
     id: "paymentMethod",
-    name: "Начин на плащане",
+    name: "НАЧИН НА ПЛАЩАНЕ",
     dropdownOptions: {
       option1: "Карта",
       option2: "Наложен платеж",
@@ -41,7 +19,7 @@ export const filterData = [
   },
   {
     id: "isPaid",
-    name: "Платена",
+    name: "ПЛАТЕНА",
     dropdownOptions: {
       option1: "Да",
       option2: "Не",
@@ -49,42 +27,62 @@ export const filterData = [
   },
   {
     id: "newClient",
-    name: "Нов клиент",
+    name: "НОВ КЛИЕНТ",
     dropdownOptions: {
       option1: "Да",
       option2: "Не",
     },
   },
 ];
-const FilterList = () => {
-  // const [startDate, setStartDate] = useState(new Date());
-  // const [isOpen, setIsOpen] = useState(false);
-  // const [selectedOption, setSelectedOption] = useState(null);
 
+const FilterList = (props) => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const mapOptions = (input) => {
+    const dataForMap = Object.values(input);
+    return dataForMap.map((option, i) => {
+      return <option>{option}</option>;
+    });
+  };
+  const setFilters = (id, value) => {
+    props.setFilter({
+      ...props.filter,
+      [id]: value,
+    });
+  };
+  const MapButtons = () => {
+    return filterData.map((currBtn, i) => {
+      if (currBtn.dropdownOptions) {
+        return (
+          <div className={classes.filterButton}>
+            <label>{currBtn.name}</label>
+            <select
+              name={currBtn.id}
+              onChange={(e) => setFilters(e.target.name, e.target.value)}
+            >
+              {mapOptions(currBtn.dropdownOptions)}
+            </select>
+          </div>
+        );
+      } else {
+        return (
+          <div className={classes.filterButton}>
+            <label>{currBtn.name}</label>
+            <DatePicker
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+            />
+          </div>
+        );
+      }
+    });
+  };
 
   return (
     <div className={classes.filterList}>
-      {filterData.map((filter) => (
-        <div key={filter.id}>
-          <FilterButton
-            name={filter.name}
-            id={filter.id}
-          />
-
-          {/* {filter.name === "Дата на създаване на поръчката" ? (
-            <DatePicker
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
-            />
-          ) : null}
-          {filter.name === "Дата на доставяне на поръчката" ? (
-            <DatePicker
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
-            />
-          ) : null} */}
-        </div>
-      ))}
+      <MapButtons />
     </div>
   );
 };

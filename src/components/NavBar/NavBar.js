@@ -3,10 +3,10 @@ import SearchBar from '../SearchBar/SearchBar'
 import classes from './NavBar.module.css'
 import FilterList from '../FilterList/FilterList'
 import DUMMY_DATA from '../../util/dummyData'
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <nav className={classes.navDiv}>
-      <FilterList />
+      <FilterList setFilter={props.setFilter} filter={props.filter}/>
       <SearchBar data={DUMMY_DATA} />
     </nav>
   )

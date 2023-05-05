@@ -7,6 +7,8 @@ const DUMMY_DATA = [
     invoice: "yes",
     isPaid: "no",
     newClient: "yes",
+    orderDate: "05/01/2023",
+    deliveryDate: "05/02/2023",
   },
   {
     id: "order2",
@@ -16,6 +18,8 @@ const DUMMY_DATA = [
     invoice: "yes",
     isPaid: "yes",
     newClient: "yes",
+    orderDate: "05/01/2023",
+    deliveryDate: "05/02/2023",
   },
   {
     id: "order3",
@@ -25,6 +29,8 @@ const DUMMY_DATA = [
     invoice: "yes",
     isPaid: "yes",
     newClient: "no",
+    orderDate: "05/01/2023",
+    deliveryDate: "05/02/2023",
   },
   {
     id: "order4",
@@ -34,6 +40,8 @@ const DUMMY_DATA = [
     invoice: "yes",
     isPaid: "yes",
     newClient: "no",
+    orderDate: "05/04/2023",
+    deliveryDate: "05/04/2023",
   },
   {
     id: "order5",
@@ -43,6 +51,8 @@ const DUMMY_DATA = [
     invoice: "yes",
     isPaid: "yes",
     newClient: "no",
+    orderDate: "04/25/2023",
+    deliveryDate: "04/25/2023",
   },
   {
     id: "order6",
@@ -51,7 +61,9 @@ const DUMMY_DATA = [
     orderAmount: "106 лв.",
     invoice: "yes",
     isPaid: "yes",
-    newClient: "no"
+    newClient: "no",
+    orderDate: "04/25/2023",
+    deliveryDate: "04/25/2023",
   },
   {
     id: "order7",
@@ -60,7 +72,9 @@ const DUMMY_DATA = [
     orderAmount: "154 лв.",
     invoice: "yes",
     isPaid: "yes",
-    newClient: "no"
+    newClient: "no",
+    orderDate: "04/25/2023",
+    deliveryDate: "04/25/2023",
   },
   {
     id: "order8",
@@ -69,7 +83,9 @@ const DUMMY_DATA = [
     orderAmount: "63 лв.",
     invoice: "yes",
     isPaid: "yes",
-    newClient: "no"
+    newClient: "no",
+    orderDate: "04/25/2023",
+    deliveryDate: "04/25/2023",
   },
   {
     id: "order9",
@@ -78,7 +94,9 @@ const DUMMY_DATA = [
     orderAmount: "59 лв.",
     invoice: "yes",
     isPaid: "yes",
-    newClient: "no"
+    newClient: "no",
+    orderDate: "04/25/2023",
+    deliveryDate: "04/25/2023",
   },
   {
     id: "order10",
@@ -87,7 +105,9 @@ const DUMMY_DATA = [
     orderAmount: "38 лв.",
     invoice: "yes",
     isPaid: "yes",
-    newClient: "no"
+    newClient: "no",
+    orderDate: "04/25/2023",
+    deliveryDate: "04/25/2023",
   },
   {
     id: "order11",
@@ -96,13 +116,17 @@ const DUMMY_DATA = [
     orderAmount: "67 лв.",
     invoice: "yes",
     isPaid: "yes",
-    newClient: "no"
+    newClient: "no",
+    orderDate: "04/25/2023",
+    deliveryDate: "04/25/2023",
   },
   {
     id: "prada",
     orderNumber: "52364",
     name: "Ralitsa Videva",
     orderAmount: "200 лв.",
+    orderDate: "04/25/2023",
+    deliveryDate: "04/25/2023",
   },
   {
     id: "prada",

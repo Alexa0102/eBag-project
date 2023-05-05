@@ -78,7 +78,7 @@ const SearchBar = ({ data }) => {
         <div className={classes.dataResult}>
           {filteredData.slice(0, 15).map((value) => {
             //   <Link onClick={clearInputHandler} className={classes.dataItem} to={`/catalog/${value.name.toLowerCase()}`}>
-            //   <p>{value.name}</p>
+              <p>{value.name}</p>
             // </Link>
             return (
               <div onClick={clearInputHandler} className={classes.dataItem}>
